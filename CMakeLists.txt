@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(franka_ros)
+find_package(catkin REQUIRED)
+
+add_subdirectory (franka_control)
+add_subdirectory (franka_description)
+add_subdirectory (franka_example_controllers)
+add_subdirectory (franka_gripper)
+add_subdirectory (franka_hw)
+add_subdirectory (franka_msgs)
+add_subdirectory (franka_ros)
+add_subdirectory (franka_visualization)
