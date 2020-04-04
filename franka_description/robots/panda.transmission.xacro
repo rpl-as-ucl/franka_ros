@@ -87,7 +87,6 @@
             </actuator>
         </transmission>
 
-
         <xacro:if value="${load_hand}">
             <transmission name="${robot_name}_leftfinger">
                 <type>transmission_interface/SimpleTransmission</type>
@@ -99,7 +98,7 @@
                     <mechanicalReduction>1</mechanicalReduction>
                 </actuator>
             </transmission>
-            
+
             <transmission name="${robot_name}_rightfinger">
                 <type>transmission_interface/SimpleTransmission</type>
                 <joint name="${robot_name}_finger_joint2">

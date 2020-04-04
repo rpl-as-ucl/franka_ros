@@ -52,11 +52,13 @@
         </geometry>
       </collision>
 
+      <!--
       <collision>
         <geometry>
           <mesh filename="package://franka_description/meshes/collision/hand.stl"/>
         </geometry>
       </collision>
+      -->
       <!-- for simulation -->
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -72,11 +74,13 @@
         </geometry>
       </visual>
 
+      <!--
       <collision>
         <geometry>
           <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
         </geometry>
       </collision>
+      -->
       <!-- for simulation -->
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -93,12 +97,14 @@
         </geometry>
       </visual>
 
+      <!--
       <collision>
         <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
         <geometry>
           <mesh filename="package://franka_description/meshes/collision/finger.stl"/>
         </geometry>
       </collision>
+      -->
       <!-- for simulation -->
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0" />
