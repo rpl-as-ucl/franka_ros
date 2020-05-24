@@ -1,6 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
   <xacro:macro name="panda_arm" params="arm_id:='panda' description_pkg:='franka_description' connected_to:='' xyz:='0 0 0' rpy:='0 0 0'">
+    
+    <!--
+    Panda is either connected to an external link 
+    or to a virtual world link.
+    -->
+
     <xacro:unless value="${not connected_to}">
       <joint name="${arm_id}_joint_${connected_to}" type="fixed">
         <parent link="${connected_to}"/>
@@ -10,14 +16,15 @@
     </xacro:unless>
 
     <!-- for simulation -->
-    <link name="world" />
+    <xacro:if value="${not connected_to}">
+      <link name="world" />
 
-    <joint name="robot_to_world" type="fixed">
-      <parent link="world" />
-      <child link="${arm_id}_link0" />
-      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
-    </joint>
-
+      <joint name="robot_to_world" type="fixed">
+        <parent link="world" />
+        <child link="${arm_id}_link0" />
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      </joint>
+      </xacro:if>
     <xacro:property name="joint_damping" value="1.0"/>
     <!-- end for simulation -->
 
