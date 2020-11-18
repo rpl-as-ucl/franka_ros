@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
   <xacro:macro name="panda_arm" params="arm_id:='panda' description_pkg:='franka_description' connected_to:='' xyz:='0 0 0' rpy:='0 0 0'">
-    
+
     <!--
-    Panda is either connected to an external link 
+    Panda is either connected to an external link
     or to a virtual world link.
     -->
 
